@@ -17,6 +17,17 @@
   background-image: none !important;
 }
 
+/* 強制禁用所有陰影（覆蓋 Tailwind） */
+[class*="shadow"] {
+  box-shadow: none !important;
+}
+
+/* 禁用所有 hover 效果 */
+:hover {
+  box-shadow: none !important;
+  transform: none !important;
+}
+
 /* 允許基本顯示 */
 .animate-fade-in {
   animation: none !important;
