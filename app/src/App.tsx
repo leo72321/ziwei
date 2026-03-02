@@ -30,18 +30,13 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<TabType>('chart')
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Aurora 极光背景 */}
-      <div className="aurora-bg" />
-      {/* 星点背景 */}
-      <div className="star-bg" />
-
+      <div className="min-h-screen flex flex-col">
       {/* 头部 - 毛玻璃导航 */}
       <header
         className="
           sticky top-0 z-40
           py-4 px-6 lg:px-12
-          bg-night/80 backdrop-blur-xl
+          bg-night/90
           border-b border-white/[0.06]
         "
       >
@@ -61,7 +56,6 @@ export default function App() {
                 "
               >
                 <span className="text-lg text-gold">☆</span>
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-star/10 to-transparent animate-pulse" />
               </div>
               {/* Logo 文字 */}
               <div>
@@ -171,7 +165,7 @@ export default function App() {
         className="
           md:hidden fixed bottom-0 left-0 right-0 z-40
           px-4 py-3
-          bg-night/90 backdrop-blur-xl
+          bg-night/95
           border-t border-white/[0.06]
         "
       >
