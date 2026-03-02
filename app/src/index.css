@@ -1,6 +1,30 @@
 @import 'tailwindcss';
 
 /* ============================================================
+   禁用所有動畫和 GPU 效果以提升性能
+   ============================================================ */
+
+* {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+*, *::before, *::after {
+  background-image: none !important;
+}
+
+/* 允許基本顯示 */
+.animate-fade-in {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ============================================================
    紫微斗数 App - 全局样式
    色彩系统：深靛蓝夜空 + 暖琥珀点缀
    ============================================================ */
@@ -78,23 +102,15 @@ body {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .glass-glow {
-  box-shadow:
-    0 0 40px rgba(124, 58, 237, 0.15),
-    0 4px 24px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .glass-gold {
-  border-color: rgba(212, 175, 55, 0.2);
-  box-shadow:
-    0 0 30px rgba(212, 175, 55, 0.1),
-    0 4px 24px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* 悬停发光效果 */
