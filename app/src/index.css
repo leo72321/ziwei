@@ -116,6 +116,23 @@ body {
   border-color: rgba(124, 58, 237, 0.3);
 }
 
+/* 禁用 aurora 動畫以降低 GPU 負擔 */
+.aurora-bg::before,
+.aurora-bg::after {
+  animation: none;
+}
+
+/* 禁用星點動畫 */
+.star-bg::before,
+.star-bg::after {
+  animation: none;
+}
+
+/* 禁用 Logo 閃爍動畫 */
+.bg-\[length\:200\%_auto\] {
+  animation: none !important;
+}
+
 /* ============================================================
    星点背景动画
    ============================================================ */
